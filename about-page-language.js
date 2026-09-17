@@ -16,9 +16,9 @@ setText('.about-heading .kicker',d.whoLabel);setText('#who-heading',d.whoHeading
 document.querySelectorAll('.who-intro-copy p').forEach((el,i)=>{if(d.intro[i])el.textContent=d.intro[i];});
 document.querySelectorAll('.focus-card').forEach((card,i)=>{if(!d.focus[i])return;const strong=card.querySelector('strong');const span=card.querySelector('span');if(strong)strong.textContent=d.focus[i][0];if(span)span.textContent=d.focus[i][1];});
 setText('#education .section-label',d.educationLabel);setText('#education-heading',d.degree);setText('#education .education-school',d.school);setText('#education .education-card p',d.educationText);
-setText('#work-experience .section-label',d.workLabel);setText('#experience-heading',d.workHeading);setText('#work-experience>p',d.workIntro);
+setText('#work-experience .section-label',d.workLabel);setText('#experience-heading',d.workHeading);setText('#work-experience > p:not(.section-label)',d.workIntro);
 document.querySelectorAll('.experience-card').forEach((card,i)=>{setTextIn(card,'.experience-date',d.dates[i]);setTextIn(card,'.experience-phone span',d.contactLabels[i]);const h3=card.querySelector('h3');if(h3){if(h3.firstChild)h3.firstChild.nodeValue=d.roles[i]+' ';else h3.textContent=d.roles[i];const seasonal=h3.querySelector('span');if(seasonal)seasonal.textContent=d.seasonal;}setTextIn(card,'p',d.experience[i]);});
-setText('#certificates .section-label',d.certLabel);setText('#certificates-heading',d.certHeading);setText('#certificates>p',d.certIntro);
+setText('#certificates .section-label',d.certLabel);setText('#certificates-heading',d.certHeading);setText('#certificates > p:not(.section-label)',d.certIntro);
 document.querySelectorAll('.certificate-card').forEach((card,i)=>{setTextIn(card,'.certificate-status',d.statuses[i]);setTextIn(card,'.certificate-meta',d.certMeta[i]);setTextIn(card,'p',d.certDescriptions[i]);setTextIn(card,'.certificate-link',d.programDetails);if(i===0){const firstSkill=card.querySelector('.certificate-skills span');if(firstSkill)firstSkill.textContent=d.spreadsheet;}});
 setText('.page-actions .btn.outline',d.back);setText('.page-actions .btn.primary',d.viewProjects);
 }
