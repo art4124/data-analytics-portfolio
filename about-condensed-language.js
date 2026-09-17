@@ -55,7 +55,7 @@ ko:{
 "Psychology gives me a foundation in human behavior and research; I pair it with practical analytics skills to examine healthcare, workforce, and behavioral questions.":"심리학을 통해 인간 행동과 연구의 기반을 쌓고, 이를 실무 분석 역량과 결합해 헬스케어, 인력, 행동 관련 질문을 살펴봅니다."
 }
 };
-const selector='.about-copy p,.who-copy h2,.who-copy p,.focus-card span,#work-experience h2,#work-experience>p,.experience-card p,#certificates .section-label,#certificates h2,#certificates>p,.certificate-status,.certificate-card p,.certificate-link,#education h2,.education-card p';
+const selector='.about-copy p,.who-copy h2,.who-copy p,.who-intro-copy p,.focus-card span,#work-experience h2,#work-experience>p,.experience-card p,#certificates .section-label,#certificates h2,#certificates>p,.certificate-status,.certificate-card p,.certificate-link,#education h2,.education-card p';
 const items=[];
 function apply(){
   const lang=document.documentElement.lang;
