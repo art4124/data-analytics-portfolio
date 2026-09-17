@@ -3,7 +3,7 @@ function initExperienceCarousel(){
   const list=document.querySelector('#work-experience .experience-list');
   if(!list||list.dataset.carouselReady==='true')return;
   const cards=Array.from(list.querySelectorAll('.experience-card'));
-  if(cards.length<=3)return;
+  if(cards.length<=2)return;
   list.dataset.carouselReady='true';
 
   const shell=document.createElement('div');
@@ -94,7 +94,7 @@ function initExperienceCarousel(){
   function renderStatic(){
     const ordered=orderedFrom(start,cards.length);
     ordered.forEach(card=>list.appendChild(card));
-    const visible=ordered.slice(0,3);
+    const visible=ordered.slice(0,2);
     setVisibility(visible);
     list.style.transition='none';
     list.style.transform='translateY(0)';
@@ -135,11 +135,11 @@ function initExperienceCarousel(){
     let distance;
 
     if(direction>0){
-      ordered=orderedFrom(start,4);
+      ordered=orderedFrom(start,3);
       ordered.forEach(card=>list.appendChild(card));
       setVisibility(ordered);
-      oldGroup=ordered.slice(0,3);
-      newGroup=ordered.slice(1,4);
+      oldGroup=ordered.slice(0,2);
+      newGroup=ordered.slice(1,3);
       distance=ordered[0].offsetHeight+GAP;
       list.style.transition='none';
       list.style.transform='translateY(0)';
@@ -153,11 +153,11 @@ function initExperienceCarousel(){
         viewport.style.height=groupHeight(newGroup)+'px';
       });
     }else{
-      ordered=orderedFrom(newStart,4);
+      ordered=orderedFrom(newStart,3);
       ordered.forEach(card=>list.appendChild(card));
       setVisibility(ordered);
-      oldGroup=ordered.slice(1,4);
-      newGroup=ordered.slice(0,3);
+      oldGroup=ordered.slice(1,3);
+      newGroup=ordered.slice(0,2);
       distance=ordered[0].offsetHeight+GAP;
       list.style.transition='none';
       list.style.transform='translateY(-'+distance+'px)';
