@@ -10,13 +10,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=20260917-4">
 <link rel="stylesheet" href="hero-fix.css?v=3">
+<link rel="stylesheet" href="nav.css?v=1">
 </head>
 <body id="top">
 <div class="page-shell">
 <header class="site-header">
 <a class="wordmark" href="#top"><strong>Alanna Thornton</strong><span>PSYCHOLOGY • BEHAVIOR • DATA ANALYSIS</span></a>
 <nav aria-label="Main navigation">
-<a class="active" href="#top">Home</a><a href="projects.html">Projects</a><a href="#about">About</a><a href="#skills">Skills</a>
+<a class="active" href="#top">Home</a>
+<div class="nav-dropdown">
+<a href="projects.html">Projects</a>
+<div class="nav-dropdown-menu" aria-label="Project categories">
+<a href="projects.html#healthcare">Healthcare</a>
+<a href="projects.html#workforce">Workforce</a>
+<a href="projects.html#behavioral">Behavioral</a>
+</div>
+</div>
+<a href="#about">About</a><a href="#skills">Skills</a>
 </nav>
 </header>
 <main>
