@@ -87,6 +87,30 @@
 </div>
 <div class="chips"><span>Python</span><span>pandas</span><span>Statistics</span></div>
 </article>
+<article class="library-card" id="certificate-case-study">
+<div class="project-number">PROJECT 04</div>
+<span class="status-badge">Planned</span>
+<h2>Google Data Analytics Certificate Case Study</h2>
+<p>Reserve this project for the certificate course case study, including the business question, data preparation, analysis, findings, and recommendations.</p>
+<div class="project-meta">
+<div><span>Primary question</span><strong>To be defined by the selected certificate case study</strong></div>
+<div><span>Planned data</span><strong>Certificate course case-study dataset (to be confirmed)</strong></div>
+<div><span>Deliverable</span><strong>Completed case study + visuals + written findings</strong></div>
+</div>
+<div class="chips"><span>Data Cleaning</span><span>Analysis</span><span>Visualization</span></div>
+</article>
+<article class="library-card" id="student-engagement">
+<div class="project-number">PROJECT 05</div>
+<span class="status-badge">Planned</span>
+<h2>Student Engagement & Academic Outcomes</h2>
+<p>Explore online learning activity, assessment scores, and course outcomes to identify patterns associated with student completion and withdrawal.</p>
+<div class="project-meta">
+<div><span>Primary question</span><strong>How do engagement and assessment patterns relate to course completion or withdrawal?</strong></div>
+<div><span>Planned data</span><strong>Open University Learning Analytics Dataset (OULAD)</strong></div>
+<div><span>Deliverable</span><strong>Student engagement dashboard + written findings</strong></div>
+</div>
+<div class="chips"><span>SQL</span><span>Python</span><span>Power BI / Tableau</span></div>
+</article>
 </div>
 </div>
 <div class="carousel-nav">
@@ -95,6 +119,8 @@
 <button class="carousel-dot active" type="button" aria-label="Show project 1" aria-current="true"></button>
 <button class="carousel-dot" type="button" aria-label="Show project 2"></button>
 <button class="carousel-dot" type="button" aria-label="Show project 3"></button>
+<button class="carousel-dot" type="button" aria-label="Show project 4"></button>
+<button class="carousel-dot" type="button" aria-label="Show project 5"></button>
 </div>
 <button class="carousel-btn next" type="button" aria-label="Next project">→</button>
 </div>
@@ -110,7 +136,7 @@ const prev=document.querySelector('.carousel-btn.prev');
 const next=document.querySelector('.carousel-btn.next');
 const dots=Array.from(document.querySelectorAll('.carousel-dot'));
 const viewport=document.querySelector('.carousel-viewport');
-const hashMap={healthcare:0,workforce:1,behavioral:2};
+const hashMap={healthcare:0,workforce:1,behavioral:2,"certificate-case-study":3,"student-engagement":4};
 let index=0,touchStartX=null;
 function goTo(i){
 index=(i+cards.length)%cards.length;
