@@ -1,0 +1,26 @@
+# OS and editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# Local dependencies, caches, and build artifacts
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+dist/
+build/
+coverage/
+.cache/
+
+# Local credentials
+.env
+.env.*
+!.env.example
+
+# Local debug output
+*.log
